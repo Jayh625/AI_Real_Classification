@@ -1,0 +1,12 @@
+DIRECTORY:
+  dataset: C:\\Users\\labadmin\\Downloads\\baseline\\data\\test\\images
+  sample_submission_path : C:\\Users\\labadmin\\Downloads\\baseline\\data\\test\\sample_submission.csv
+
+TRAIN:
+  train_serial: '20230706_094149'
+  #'YYYYMMDD_HHMMSS'
+  batch_size: 32
+
+PREDICT:
+  seed: 42
+  gpu: 0

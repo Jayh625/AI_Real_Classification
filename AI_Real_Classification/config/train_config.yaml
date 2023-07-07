@@ -1,0 +1,57 @@
+DIRECTORY:
+  dataset: C:\\Users\\labadmin\\Downloads\\baseline\\data\\train
+
+TRAINER :
+  model: vit
+  optimizer: sgd
+  learning_rate: 0.001
+  loss: bce
+  metric:
+    - accuracy
+    - f1macro
+  n_epochs: 50
+  early_stopping_target: val_accuracy
+  early_stopping_patience: 10
+  early_stopping_mode: max
+  amp: False
+  gpu: 0
+  seed: 42
+
+MODEL:
+  effnet:
+    backbone: efficientnet_b0
+    n_out: 1
+    is_sigmoid: True
+  effnetb4:
+    model_name : efficientnet_b4
+    n_outputs : 1
+    is_sigmoid: True 
+  effnetb7:
+    model_name : tf_efficientnet_b7_ns
+    num_classes : 1
+    is_sigmoid: True 
+  vit : 
+    num_classes : 1
+  resnet18 :
+    num_classes : 1
+
+DATASET:
+  val_size : 0.3
+
+DATALOADER:
+  batch_size: 8
+  num_workers: 4
+  shuffle: True
+  pin_memory: True
+  drop_last: True
+
+LOGGER:
+  debug : False
+  wandb: False
+  logging_interval: 100
+  plot:
+    - loss
+    - accuracy
+    - f1macro
+    - elapsed_time
+

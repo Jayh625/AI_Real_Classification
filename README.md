@@ -7,6 +7,6 @@ https://aiconnect.kr/competition/detail/227
 - 시상식: 07/20 (목)
   
 ## 결과 
-25/115 
+115팀중 25등  
 
 https://aiconnect.kr/competition/detail/227/task/295/leaderboard
